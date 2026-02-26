@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Pricing Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased font-sans bg-slate-50">
+
+    <!-- Pricing Section -->
+    <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-lg mx-auto">
+            
+            <!-- Pricing Card -->
+            <div class="relative bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(79,70,229,0.15)] ring-1 ring-slate-100 overflow-hidden transform transition-all duration-300 hover:-translate-y-1">
+                
+                <!-- Badge Penawaran Spesial (Diperbaiki agar Standout & Responsif) -->
+                <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                <div class="absolute top-0 right-0 bg-indigo-600 text-white text-[10px] sm:text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-3xl uppercase tracking-wider shadow-md z-10">
+                    Penawaran Terbatas
+                </div>
+
+                <!-- Penambahan pt-12 untuk memberi ruang badge di mobile -->
+                <div class="p-8 sm:p-10 pt-12 sm:pt-10">
+                    <!-- Judul Penawaran -->
+                    <h3 
+                        class="text-2xl font-semibold text-slate-900 mb-2 pr-10 sm:pr-0"
+                        data-bc="pricing_title"
+                    >
+                        Akses Premium Seumur Hidup
+                    </h3>
+                    
+                    <!-- Harga Area -->
+                    <div class="mt-4 flex flex-col justify-center">
+                        <!-- Harga Coret (Normal) -->
+                        <span 
+                            class="text-base sm:text-lg text-slate-400 line-through font-medium mb-1"
+                            data-bc="pricing_normal"
+                        >
+                            Rp 2.500.000
+                        </span>
+                        
+                        <!-- Harga Promo (Diperbaiki agar tidak turun baris berantakan) -->
+                        <div class="flex flex-wrap items-baseline gap-x-2">
+                            <span class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight whitespace-nowrap" data-bc="pricing_promo">Rp 499.000</span>
+                            <span class="text-base sm:text-lg font-medium text-slate-500 tracking-normal whitespace-nowrap">/sekali bayar</span>
+                        </div>
+                    </div>
+
+                    <!-- Pemisah -->
+                    <hr class="my-8 border-slate-100">
+
+                    <!-- Daftar Keuntungan (Benefits) -->
+                    <ul class="space-y-4 mb-8">
+                        
+                        <!-- MASTER BENEFIT ITEM (Hanya 1 baris untuk di-looping sistem) -->
+                        <li id="bc-benefit-item" class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-indigo-50">
+                                <!-- Ikon Check -->
+                                <svg class="w-4 h-4 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <span 
+                                class="ml-3 text-slate-600 leading-relaxed"
+                                data-bc="pricing_benefit"
+                            >
+                                Akses penuh ke semua fitur premium tanpa batas waktu.
+                            </span>
+                        </li>
+                        <!-- Akhir Master Benefit Item -->
+
+                    </ul>
+
+                    <!-- CTA Button -->
+                    <a 
+                        href="#" 
+                        class="block w-full py-4 px-6 text-center rounded-xl text-white font-semibold text-lg bg-slate-900 hover:bg-indigo-600 shadow-md hover:shadow-xl transition-all duration-300"
+                        data-bc="pricing_cta"
+                    >
+                        Ambil Penawaran Sekarang
+                    </a>
+
+                    <!-- Garansi -->
+                    <p 
+                        class="mt-5 text-sm text-center text-slate-500 flex items-center justify-center gap-1.5"
+                        data-bc="pricing_guarantee"
+                    >
+                        <svg class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        Garansi 30 Hari Uang Kembali 100%
+                    </p>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-900">
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Title -->
+            <div class="text-center mb-16">
+                <h2 data-bc="faq_title" class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+                    Pertanyaan yang Sering Diajukan
+                </h2>
+                <p class="text-lg text-slate-600 font-light max-w-2xl mx-auto">
+                    Temukan jawaban atas beberapa pertanyaan umum dari pelanggan kami tentang layanan dan fitur platform.
+                </p>
+            </div>
+
+            <!-- FAQ Container -->
+            <div class="space-y-4">
+                
+                <!-- 1 BARIS MASTER FAQ / MASTER ITEM -->
+                <!-- Menggunakan <details> untuk fungsionalitas accordion murni HTML -->
+                <!-- class [&_summary::-webkit-details-marker]:hidden digunakan untuk menyembunyikan panah default bawaan browser -->
+                <details id="bc-faq-item" class="group border border-slate-200 bg-white rounded-2xl shadow-sm hover:border-blue-300 transition-colors duration-300 [&_summary::-webkit-details-marker]:hidden">
+                    
+                    <!-- Question Summary -->
+                    <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer text-slate-900 font-semibold select-none">
+                        <h3 data-bc="faq_question" class="text-lg pr-4">
+                            Apakah saya bisa membatalkan langganan kapan saja?
+                        </h3>
+                        
+                        <!-- Animated Plus/Cross Icon -->
+                        <!-- group-open:rotate-45 akan memutar ikon Plus (+) menjadi Silang (x) saat accordion terbuka -->
+                        <span class="relative flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 text-slate-500 transition-all duration-300 group-open:rotate-45 group-open:bg-blue-600 group-open:text-white shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                            </svg>
+                        </span>
+                    </summary>
+                    
+                    <!-- Answer Content -->
+                    <div class="px-6 pb-6 pt-0 text-slate-600">
+                        <p data-bc="faq_answer" class="text-base leading-relaxed">
+                            Tentu saja. Anda dapat membatalkan, meningkatkan, atau menurunkan paket langganan Anda kapan saja melalui dasbor pengaturan akun. Tidak ada biaya tersembunyi atau kontrak jangka panjang yang mengikat.
+                        </p>
+                    </div>
+
+                </details>
+                <!-- END MASTER ITEM -->
+
+            </div>
+            
+            <!-- Optional: Contact Support Link -->
+            <div class="mt-12 text-center">
+                <p class="text-slate-600">
+                    Masih punya pertanyaan? 
+                    <a href="#" class="font-semibold text-blue-600 hover:text-blue-700 hover:underline transition-all">Hubungi Tim Support Kami</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

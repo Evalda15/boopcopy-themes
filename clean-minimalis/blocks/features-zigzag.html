@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Zigzag Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased font-sans bg-white">
+
+    <!-- Zigzag Feature Section -->
+    <section class="py-16 sm:py-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- MASTER ROW (Hanya 1 baris untuk di-looping sistem) -->
+            <div 
+                id="bc-zigzag-item" 
+                class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 group"
+            >
+                
+                <!-- Area Teks (Kiri di Desktop, Atas di Mobile) -->
+                <div class="w-full lg:w-1/2 flex flex-col items-center text-center lg:items-start lg:text-left z-10">
+                    <h3 
+                        class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-6"
+                        data-bc="zigzag_title"
+                    >
+                        Kolaborasi Tim Tanpa Batas
+                    </h3>
+                    
+                    <p 
+                        class="text-lg text-slate-500 leading-relaxed font-light"
+                        data-bc="zigzag_desc"
+                    >
+                        Tingkatkan produktivitas dengan ruang kerja terpusat. Hubungkan setiap anggota tim dalam satu platform yang intuitif, sinkronisasi data secara real-time, dan capai target proyek lebih cepat dari sebelumnya.
+                    </p>
+                </div>
+
+                <!-- Area Gambar (Kanan di Desktop, Bawah di Mobile) -->
+                <div class="w-full lg:w-1/2 relative z-10">
+                    <!-- Wrapper Gambar -->
+                    <div class="relative rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.08)] ring-1 ring-slate-100 bg-slate-50 aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/3] transition-transform duration-500 group-hover:-translate-y-1 group-hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.12)]">
+                        <img 
+                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                            alt="Ilustrasi Fitur Kolaborasi" 
+                            class="object-cover w-full h-full"
+                            data-bc="zigzag_image"
+                        >
+                    </div>
+                    
+                    <!-- Dekorasi Background Halus (Opsional, memberi kesan premium) -->
+                    <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-blue-50 rounded-full -z-10 blur-3xl opacity-80"></div>
+                    <div class="absolute -top-8 -left-8 w-32 h-32 bg-indigo-50 rounded-full -z-10 blur-3xl opacity-80"></div>
+                </div>
+
+            </div>
+            <!-- Akhir Master Row -->
+
+        </div>
+    </section>
+
+</body>
+</html>

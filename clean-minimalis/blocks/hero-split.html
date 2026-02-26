@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section Split</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased font-sans bg-gray-50">
+
+    <!-- Hero Section -->
+    <section class="relative bg-white overflow-hidden py-16 sm:py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                
+                <!-- Kolom Teks (Kiri di Desktop, Atas di Mobile) -->
+                <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+                    <h1 
+                        class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-[1.1] mb-6" 
+                        data-bc="hero_headline"
+                    >
+                        Tingkatkan Performa Bisnis Anda ke Level Berikutnya
+                    </h1>
+                    
+                    <p 
+                        class="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl lg:max-w-none" 
+                        data-bc="hero_subheadline"
+                    >
+                        Solusi digital modern yang dirancang khusus untuk mempermudah alur kerja, meningkatkan produktivitas, dan mempercepat pertumbuhan tim Anda secara efisien.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                        <a 
+                            href="#" 
+                            class="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-full shadow-sm hover:shadow-md transition-all duration-200" 
+                            data-bc="hero_cta"
+                        >
+                            Mulai Sekarang Secara Gratis
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kolom Gambar (Kanan di Desktop, Bawah di Mobile) -->
+                <div class="w-full lg:w-1/2 relative mt-8 lg:mt-0">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100 aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/3]">
+                        <img 
+                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                            alt="Ilustrasi Dashboard Produk" 
+                            class="object-cover w-full h-full"
+                            data-bc="hero_image"
+                        >
+                        <!-- Efek overlay tipis agar gambar terlihat lebih premium -->
+                        <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl"></div>
+                    </div>
+                    
+                    <!-- Dekorasi tambahan (opsional, untuk kesan elegan) -->
+                    <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-indigo-50 rounded-full -z-10 blur-2xl"></div>
+                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-blue-50 rounded-full -z-10 blur-2xl"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
